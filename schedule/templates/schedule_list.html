@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Расписание</title>
+</head>
+<body>
+<h1>Расписание</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Маршрут</th>
+        <th>Время отправления</th>
+        <th>Время прибытия</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for schedule in schedules %}
+        <tr>
+            <td>{{ schedule.route.name }}</td>
+            <td>{{ schedule.departure_time }}</td>
+            <td>{{ schedule.arrival_time }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
