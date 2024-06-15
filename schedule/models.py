@@ -3,8 +3,8 @@ from django.db import models
 
 class Route(models.Model):
     name = models.CharField(max_length=100, verbose_name='Название маршрута')
-    start_point = models.CharField(max_length=20, verbose_name='Начальная станция')
-    end_point = models.CharField(max_length=20, verbose_name='Конечная станция')
+    start_point = models.CharField(max_length=100, verbose_name='Начальная станция')
+    end_point = models.CharField(max_length=100, verbose_name='Конечная станция')
 
     def __str__(self):
         return self.name

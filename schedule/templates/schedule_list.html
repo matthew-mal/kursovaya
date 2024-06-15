@@ -1,5 +1,6 @@
-{% block title %}<title>Расписание</title>{% endblock %}
+{% extends 'base.html' %}
 
+{% block title %}<title>Расписание</title>{% endblock %}
 
 {% block content %}
     <h1>Расписание движения</h1>
@@ -8,8 +9,8 @@
             <thead>
             <tr>
                 <th>Маршрут</th>
-                <th>Время отправления</th>
-                <th>Время прибытия</th>
+                <th>Начало движения</th>
+                <th>Окончание движения</th>
             </tr>
             </thead>
             <tbody>

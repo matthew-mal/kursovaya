@@ -6,5 +6,6 @@ from schedule import views
 app_name = 'schedule'
 
 urlpatterns = [
-                  path('', views.schedule_list, name='schedule_list'),
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('about/', views.about, name='about'),
+    path('schedule/', views.schedule_list, name='schedule_list'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
