@@ -8,17 +8,21 @@
         <table>
             <thead>
             <tr>
+                <th>Название маршрута</th>
                 <th>Маршрут</th>
                 <th>Начало движения</th>
                 <th>Окончание движения</th>
+                <th>Интервал</th>
             </tr>
             </thead>
             <tbody>
             {% for schedule in schedules %}
                 <tr>
-                    <td>{{ schedule.route.name }}</td>
+                    <td>{{ schedule.name }}</td>
+                    <td>{{ schedule.start_point }} - {{ schedule.end_point }}</td>
                     <td>{{ schedule.departure_time }}</td>
                     <td>{{ schedule.arrival_time }}</td>
+                    <td>{{ schedule.interval }}</td>
                 </tr>
             {% endfor %}
             </tbody>
