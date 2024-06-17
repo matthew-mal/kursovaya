@@ -1,14 +1,14 @@
 {% load static %}
 <header>
-  <img
-    src="{% static 'img/water-tram.png' %}"
-    width="200"
-    height="120"
-    alt="Портфолио дизайнера Ольги"
-  >
-  <nav>
-    <a href="{% url 'schedule:about' %}">О проекте</a>
-    <a href="{% url 'schedule:schedule_list' %}">Маршрут</a>
-    <a href="#">Контакты</a>
-  </nav>
+    <div class="wrap-logo">
+        <img src="{% static 'img/water-tram.png' %}"
+             width="60"
+             height="60"
+        >
+    </div>
+    <nav>
+        <a class="active" href="{% url 'schedule:about' %}">О проекте</a>
+        <a href="{% url 'schedule:schedule_list' %}">Расписание</a>
+        <a href="#">О нас</a>
+    </nav>
 </header>
