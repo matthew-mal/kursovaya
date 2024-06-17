@@ -31,3 +31,12 @@ class Station(models.Model):
 class TimeSlot(models.Model):
     station = models.ForeignKey(Station, on_delete=models.CASCADE, related_name='time_slots')
     departure_time = models.TimeField()
+
+
+class Vessel(models.Model):
+    route = models.ForeignKey(Route, on_delete=models.CASCADE, related_name='vessels')
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+

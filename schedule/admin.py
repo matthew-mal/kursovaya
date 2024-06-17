@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Route, Schedule, Station, TimeSlot
+from .models import Route, Schedule, Station, TimeSlot, Vessel
 
 
 @admin.register(Route)
@@ -23,3 +23,9 @@ class StationAdmin(admin.ModelAdmin):
 class TimeSlotAdmin(admin.ModelAdmin):
     list_display = ['station', 'departure_time']
     list_filter = ['station']
+
+
+@admin.register(Vessel)
+class VesselAdmin(admin.ModelAdmin):
+    list_display = ['name', 'route']
+    list_filter = ['route']
